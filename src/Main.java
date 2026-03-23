@@ -1,5 +1,14 @@
 public class Main {
 
+    public static int digitCount(int number){
+        int count = 0;
+        while(number > 0){
+            number = number/ 10;
+            count++;
+        }
+        return  count;
+    }
+
     public static int greatestCommonDivisor(int num1, int num2){
         if(num1 < 10 || num2 < 10){
             return  -1;
@@ -26,6 +35,7 @@ public class Main {
     public static void main(String[] args) {
         printDivisor(25);
         System.out.println(greatestCommonDivisor(100, 25));
+        System.out.println(digitCount(1));
 
     }
 }
