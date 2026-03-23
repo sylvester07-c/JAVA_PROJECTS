@@ -1,5 +1,103 @@
 public class Main {
 
+    public class NumberToWords {
+        // write code here
+        public static int getDigitCount(int number){
+            if(number < 0){
+                return -1;
+            }
+            int count = 0;
+            while(number > 0){
+                number = number/ 10;
+                count++;
+            }
+            return  count;
+        }
+
+        public static int reverse(int number){
+            int reverse = 0;
+            while(number != 0){
+                int lnumber = number % 10;
+                reverse = reverse * 10;
+                reverse += lnumber;
+                number = number/10;
+            }
+            return reverse;
+        }
+
+        public static void numberToWords(int number){
+
+            if(number < 0){
+                System.out.println("Invalid Value");
+            }
+
+            int reverse = reverse(number);
+            int leadingZeroes = getDigitCount(number) - getDigitCount(reverse);
+
+            if(number == 0){
+                System.out.println("Zero");
+            }
+
+            while(reverse != 0){
+                int lastDigit = number % 10;
+
+                switch(lastDigit){
+                    case 0:
+                        System.out.println("Zero");
+                        break;
+                    case 1:
+                        System.out.println("One");
+                        break;
+                    case 2:
+                        System.out.println("Two");
+                        break;
+                    case 3:
+                        System.out.println("Three");
+                        break;
+                    case 4:
+                        System.out.println("Four");
+                        break;
+                    case 5:
+                        System.out.println("Five");
+                        break;
+                    case 6:
+                        System.out.println("Six");
+                        break;
+                    case 7:
+                        System.out.println("Seven");
+                        break;
+                    case 8:
+                        System.out.println("Eight");
+                        break;
+                    case 9:
+                        System.out.println("Nine");
+                        break;
+                    default:
+                        System.out.println("Invalid");
+                        break;
+                }
+                reverse /= 10;
+
+
+            }
+            for (int i = 0; i < leadingZeroes; i++) {
+                System.out.println("Zero");
+            }
+
+        }
+    }
+
+    public static int reverseNumber(int number){
+        int reverse = 0;
+        while( number > 0){
+            int lnumber = number % 10;
+            reverse = reverse * 10;
+            reverse += lnumber;
+            number = number / 10;
+        }
+        return reverse;
+    }
+
     public static int digitCount(int number){
         int count = 0;
         while(number > 0){
@@ -36,6 +134,51 @@ public class Main {
         printDivisor(25);
         System.out.println(greatestCommonDivisor(100, 25));
         System.out.println(digitCount(1));
+        System.out.println(reverseNumber(120));
+
+        int number = 0;
+        while(number > 0){
+            int lastDigit = number % 10;
+
+            switch(lastDigit){
+                case 0:
+                    System.out.println("Zero");
+                    break;
+                case 1:
+                    System.out.println("One");
+                    break;
+                case 2:
+                    System.out.println("Two");
+                    break;
+                case 3:
+                    System.out.println("Three");
+                    break;
+                case 4:
+                    System.out.println("Four");
+                    break;
+                case 5:
+                    System.out.println("Five");
+                    break;
+                case 6:
+                    System.out.println("Six");
+                    break;
+                case 7:
+                    System.out.println("Seven");
+                    break;
+                case 8:
+                    System.out.println("Eight");
+                    break;
+                case 9:
+                    System.out.println("Nine");
+                    break;
+                default:
+                    System.out.println("Invalid");
+                    break;
+            }
+            number /= 10;
+
+        }
+
 
     }
 }
