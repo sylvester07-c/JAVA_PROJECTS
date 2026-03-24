@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static int validDateOfBirth(int currentYear, String dateOfbirth){
+        int dob = Integer.parseInt(dateOfbirth);
+        int minimumYear = currentYear - 125;
+
+        if(dob < minimumYear || dob > currentYear){
+            return  -1;
+        }
+        return  dob;
+    }
+
     public class NumberToWords {
         // write code here
         public static int getDigitCount(int number){
@@ -181,14 +191,34 @@ public class Main {
 
         }
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("What is your name: ");
+//        String name = scanner.nextLine();
+//        System.out.println("Hey, " + name + " how are you doing today?");
+//        System.out.println("What year where you born? ");
+//        boolean validDOB = false;
+//        int age = 0;
+//        do{
+//            System.out.println("Enter a year of birth >= " + (currentYear - 125) + " and <= " + currentYear));
+//        }
+//
+//        int actualAge = 2026 - Integer.parseInt(dob);
+//        System.out.println("Great, you are " + actualAge + " years old");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Hey, " + name + " how are you doing today?");
-        System.out.println("What year where you born? ");
-        String dob = scanner.nextLine();
-        int actualAge = 2026 - Integer.parseInt(dob);
-        System.out.println("Great, you are " + actualAge + " years old");
+        int count = 1;
+        double sum = 0;
+        while(count <= 5){
+            System.out.println("Enter number #" + count + ":");
+            String nextNumber = scanner.nextLine();
+            try {
+                double number1 = Double.parseDouble(nextNumber);
+                count++;
+                sum += number;
+            }catch(NumberFormatException nfe){
+                System.out.println("Invalid number");
+            }
+        }
+        System.out.println("The sum of the 5 numbers = " + sum);
 
     }
 }
