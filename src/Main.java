@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public class NumberToWords {
@@ -179,6 +181,14 @@ public class Main {
 
         }
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Hey, " + name + " how are you doing today?");
+        System.out.println("What year where you born? ");
+        String dob = scanner.nextLine();
+        int actualAge = 2026 - Integer.parseInt(dob);
+        System.out.println("Great, you are " + actualAge + " years old");
 
     }
 }
