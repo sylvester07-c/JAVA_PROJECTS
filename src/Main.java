@@ -147,6 +147,7 @@ public class Main {
         System.out.println(greatestCommonDivisor(100, 25));
         System.out.println(digitCount(1));
         System.out.println(reverseNumber(120));
+        System.out.println();
 
         int number = 0;
         while(number > 0){
@@ -201,24 +202,64 @@ public class Main {
 //        do{
 //            System.out.println("Enter a year of birth >= " + (currentYear - 125) + " and <= " + currentYear));
 //        }
-//
+
 //        int actualAge = 2026 - Integer.parseInt(dob);
 //        System.out.println("Great, you are " + actualAge + " years old");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//        int count = 1;
+//        double sum = 0;
+//        while(count <= 5){
+//            System.out.println("Enter number #" + count + ":");
+//            String nextNumber = scanner.nextLine();
+//            try {
+//                double number1 = Double.parseDouble(nextNumber);
+//                count++;
+//                sum += number1;
+//            }catch(NumberFormatException nfe){
+//                System.out.println("Invalid number");
+//            }
+//        }
+//        System.out.println("The sum of the 5 numbers = " + sum);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        double max = 0;
+//        double min = 0;
+//        int loopCount = 0;
+//
+//        while(true){
+//        System.out.println("Enter a number or a character to quit: ");
+//        String number1 = scanner.nextLine();
+//        try {
+//
+//        }
+//        catch(NumberFormatException nfe){
+//
+//        }
         int count = 1;
-        double sum = 0;
+        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
         while(count <= 5){
-            System.out.println("Enter number #" + count + ":");
-            String nextNumber = scanner.nextLine();
             try {
-                double number1 = Double.parseDouble(nextNumber);
+                System.out.println("Enter number #" + count + ":");
+
+                String num = scanner.nextLine();
+                int num1 = Integer.parseInt(num);
+
+                sum += num1;
+
                 count++;
-                sum += number;
-            }catch(NumberFormatException nfe){
-                System.out.println("Invalid number");
+
+            }catch(NumberFormatException e){
+                System.out.println("Invalid number, enter a valid number");
             }
+
+
+
+
         }
-        System.out.println("The sum of the 5 numbers = " + sum);
+        System.out.println("Sum of number is: " + sum);
+
+
 
     }
 }
