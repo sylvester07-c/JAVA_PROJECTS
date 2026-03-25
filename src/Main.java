@@ -259,6 +259,23 @@ public class Main {
         }
         System.out.println("Sum of number is: " + sum);
 
+        Scanner scanner1 = new Scanner(System.in);
+        int max = 0;
+        int min = 0;
+        boolean validNumber = false;
+        while(!validNumber){
+            System.out.println("Enter a valid number: ");
+            String num = scanner1.nextLine();
+            int num1 = Integer.parseInt(num);
+            min =+ num1;
+            if(num1 > min){
+                num1 = max;
+            }
+            System.out.println(min);
+            System.out.println(max);
+
+
+        }
 
 
     }
