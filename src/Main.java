@@ -288,6 +288,8 @@ public class Main {
         SimpleCalculator calc1 = new SimpleCalculator();
         calc1.setFirstNumber(23);
         calc1.setSecondNumber(45);
+        calc1.getFirstNumber();
+        calc1.getSecondNumber();
         calc1.getAdditionResult();
         calc1.getMultiplicationResult();
         calc1.getDivisionResult();
