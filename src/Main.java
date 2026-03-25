@@ -143,55 +143,55 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        printDivisor(25);
-        System.out.println(greatestCommonDivisor(100, 25));
-        System.out.println(digitCount(1));
-        System.out.println(reverseNumber(120));
-        System.out.println();
-
-        int number = 0;
-        while(number > 0){
-            int lastDigit = number % 10;
-
-            switch(lastDigit){
-                case 0:
-                    System.out.println("Zero");
-                    break;
-                case 1:
-                    System.out.println("One");
-                    break;
-                case 2:
-                    System.out.println("Two");
-                    break;
-                case 3:
-                    System.out.println("Three");
-                    break;
-                case 4:
-                    System.out.println("Four");
-                    break;
-                case 5:
-                    System.out.println("Five");
-                    break;
-                case 6:
-                    System.out.println("Six");
-                    break;
-                case 7:
-                    System.out.println("Seven");
-                    break;
-                case 8:
-                    System.out.println("Eight");
-                    break;
-                case 9:
-                    System.out.println("Nine");
-                    break;
-                default:
-                    System.out.println("Invalid");
-                    break;
-            }
-            number /= 10;
-
-        }
-
+//        printDivisor(25);
+//        System.out.println(greatestCommonDivisor(100, 25));
+//        System.out.println(digitCount(1));
+//        System.out.println(reverseNumber(120));
+//        System.out.println();
+//
+//        int number = 0;
+//        while(number > 0){
+//            int lastDigit = number % 10;
+//
+//            switch(lastDigit){
+//                case 0:
+//                    System.out.println("Zero");
+//                    break;
+//                case 1:
+//                    System.out.println("One");
+//                    break;
+//                case 2:
+//                    System.out.println("Two");
+//                    break;
+//                case 3:
+//                    System.out.println("Three");
+//                    break;
+//                case 4:
+//                    System.out.println("Four");
+//                    break;
+//                case 5:
+//                    System.out.println("Five");
+//                    break;
+//                case 6:
+//                    System.out.println("Six");
+//                    break;
+//                case 7:
+//                    System.out.println("Seven");
+//                    break;
+//                case 8:
+//                    System.out.println("Eight");
+//                    break;
+//                case 9:
+//                    System.out.println("Nine");
+//                    break;
+//                default:
+//                    System.out.println("Invalid");
+//                    break;
+//            }
+//            number /= 10;
+//
+//        }
+//
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("What is your name: ");
 //        String name = scanner.nextLine();
@@ -235,47 +235,54 @@ public class Main {
 //        catch(NumberFormatException nfe){
 //
 //        }
-        int count = 1;
-        int sum = 0;
-        Scanner scanner = new Scanner(System.in);
-        while(count <= 5){
-            try {
-                System.out.println("Enter number #" + count + ":");
+//        int count = 1;
+//        int sum = 0;
+//        Scanner scanner = new Scanner(System.in);
+//        while(count <= 5){
+//            try {
+//                System.out.println("Enter number #" + count + ":");
+//
+//                String num = scanner.nextLine();
+//                int num1 = Integer.parseInt(num);
+//
+//                sum += num1;
+//
+//                count++;
+//
+//            }catch(NumberFormatException e){
+//                System.out.println("Invalid number, enter a valid number");
+//            }
+//
+//
+//
+//
+//        }
+//        System.out.println("Sum of number is: " + sum);
+//
+//        Scanner scanner1 = new Scanner(System.in);
+//        int max = 0;
+//        int min = 0;
+//        boolean validNumber = false;
+//        while(!validNumber){
+//            System.out.println("Enter a valid number: ");
+//            String num = scanner1.nextLine();
+//            int num1 = Integer.parseInt(num);
+//            min =+ num1;
+//            if(num1 > min){
+//                num1 = max;
+//            }
+//            System.out.println(min);
+//            System.out.println(max);
+//
+//
+//        }
 
-                String num = scanner.nextLine();
-                int num1 = Integer.parseInt(num);
-
-                sum += num1;
-
-                count++;
-
-            }catch(NumberFormatException e){
-                System.out.println("Invalid number, enter a valid number");
-            }
-
-
-
-
-        }
-        System.out.println("Sum of number is: " + sum);
-
-        Scanner scanner1 = new Scanner(System.in);
-        int max = 0;
-        int min = 0;
-        boolean validNumber = false;
-        while(!validNumber){
-            System.out.println("Enter a valid number: ");
-            String num = scanner1.nextLine();
-            int num1 = Integer.parseInt(num);
-            min =+ num1;
-            if(num1 > min){
-                num1 = max;
-            }
-            System.out.println(min);
-            System.out.println(max);
-
-
-        }
+        BankAccount acc1 = new BankAccount();
+        acc1.setBalance(450000.00);
+        acc1.depositFunds(34500);
+//        acc1.withdraw(10000000.00);
+        acc1.withdraw(40000);
+        System.out.println(acc1.getBalance());
 
 
     }
