@@ -285,5 +285,12 @@ public class Main {
         System.out.println(acc1.getBalance());
 
 
+        SimpleCalculator calc1 = new SimpleCalculator();
+        calc1.setFirstNumber(23);
+        calc1.setSecondNumber(45);
+        calc1.getAdditionResult();
+        calc1.getMultiplicationResult();
+        calc1.getDivisionResult();
+
     }
 }
