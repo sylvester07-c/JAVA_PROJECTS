@@ -291,6 +291,7 @@ public class Main {
         calc1.getAdditionResult();
         calc1.getMultiplicationResult();
         calc1.getDivisionResult();
+        calc1.getMultiplicationResult();
 
     }
 }
