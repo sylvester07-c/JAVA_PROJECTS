@@ -288,12 +288,29 @@ public class Main {
         SimpleCalculator calc1 = new SimpleCalculator();
         calc1.setFirstNumber(23);
         calc1.setSecondNumber(45);
-        calc1.getFirstNumber();
-        calc1.getSecondNumber();
-        calc1.getAdditionResult();
-        calc1.getMultiplicationResult();
-        calc1.getDivisionResult();
-        calc1.getMultiplicationResult();
+        System.out.println(calc1.getFirstNumber());
+        System.out.println(calc1.getSecondNumber());
+        System.out.println(calc1.getAdditionResult());
+        System.out.println(calc1.getMultiplicationResult());
+        System.out.println(calc1.getDivisionResult());
+        System.out.println(calc1.getMultiplicationResult());
+
+//        Person person = new Person();
+//        person.setLastname("Sylvester");
+//        System.out.println(person.getLastName());
+        Person person = new Person();
+        person.setFirstName("");   // firstName is set to empty string
+        person.setLastName("");    // lastName is set to empty string
+        person.setAge(5);
+        System.out.println(person.getAge());
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setFirstName("John");    // firstName is set to John
+        person.setAge(18);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setLastName("Smith");    // lastName is set to Smith
+        System.out.println("fullName= " + person.getFullName());
 
     }
 }
