@@ -312,5 +312,30 @@ public class Main {
         person.setLastName("Smith");    // lastName is set to Smith
         System.out.println("fullName= " + person.getFullName());
 
+        Customer customer = new Customer("Praise", 2457.2345, "sylvester07@gmail.com");
+        Customer customer1 = new Customer();
+        System.out.println(customer1.getCreditLimit());
+        System.out.println(customer1.getName());
+        System.out.println(customer1.getEmailAddress());
+
+        for(int i = 1; i <= 5; i++){
+            Student student = new Student(
+                  100020 + i,
+                  switch(i){
+                      case  1 -> "Dave";
+                      case 2 -> "Nuru";
+                      case 3 -> "Favour";
+                      case 4 -> "Praise";
+                      case 5 -> "Tim";
+                      default ->  "Annonymous";
+                  }, "07/12/2005",
+                    "JavaMaster"
+
+            );
+            System.out.println(student);
+
+        }
+
+
     }
 }
